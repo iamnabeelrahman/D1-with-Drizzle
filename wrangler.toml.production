@@ -1,0 +1,12 @@
+name = "nextjs-d1-drizzle-cloudflare-pages"
+compatibility_date = "2024-11-11"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tutorial_drizzle_d1"
+database_id = "b77a427d-9331-47b7-aaa0-659f10273f5c"
+preview_database_id = "DB"
