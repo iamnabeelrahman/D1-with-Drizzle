@@ -12,7 +12,7 @@ pages_build_output_dir = ".vercel/output/static"
 # mode = "smart"
 
 [[d1_databases]]
-binding = "DB"
-database_name = "saral-events-db"
-database_id = "505a71c9-5f28-4a8c-910f-6fafc2b4376a"
-migrations_dir = ".drizzle-out"
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "your d1" # When you create your D1 DB, you choose the name
+database_id = "b77your idc"
+preview_database_id = "your id"
