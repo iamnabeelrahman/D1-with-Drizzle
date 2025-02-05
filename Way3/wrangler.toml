@@ -12,7 +12,7 @@ pages_build_output_dir = ".vercel/output/static"
 # mode = "smart"
 
 [[d1_databases]]
-binding = "DB"
-database_name = "new_d1_db"
-database_id = "24d85814-be9e-46e4-b379-0d458443e728"
-migrations_dir = ".drizzle-out"
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "your d1" # When you create your D1 DB, you choose the name
+database_id = "b77your idc"
+preview_database_id = "your id"
