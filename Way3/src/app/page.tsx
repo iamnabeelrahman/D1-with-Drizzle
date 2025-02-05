@@ -9,7 +9,10 @@ export const runtime = 'edge'
 export default async function Home() {
   const { env } = getRequestContext();
   const DB = drizzle(env.DB);
-
+if (DB) {
+  console.log("DB connect3d: ", DB);
+  
+}
   const userList = await DB.select().from(users).all();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

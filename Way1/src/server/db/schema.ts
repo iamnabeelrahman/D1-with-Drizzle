@@ -8,11 +8,3 @@ export const customerTable = sqliteTable('customer', {
   companyName: text('companyName').notNull(),
   contactName: text('contactName').notNull(),
 });
-
-export const users = sqliteTable("users", {
-  id: integer('id').primaryKey({autoIncrement:true}), 
-  username: text('username').notNull().unique(), 
-  email: text('email').notNull().unique(), 
-  password: text('password').notNull(),
-  createdAt: integer('created_at').default(Math.floor(Date.now() / 1000)),
-})

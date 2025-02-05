@@ -10,7 +10,6 @@ import { env } from '@/env';
 export default env.DB_LOCAL_PATH
   ? defineConfig({
       schema: './src/server/db/schema.ts',
-      out: './drizzle',
       dialect: 'sqlite',
       dbCredentials: {
         url: env.DB_LOCAL_PATH,
@@ -23,7 +22,7 @@ export default env.DB_LOCAL_PATH
       dialect: 'sqlite',
       dbCredentials: {
         accountId: env.CLOUDFLARE_ACCOUNT_ID!,
-        databaseId: env.DB_REMOTE_DATABASE_ID!,
         token: env.CLOUDFLARE_API_TOKEN!,
+        databaseId: env.DB_REMOTE_DATABASE_ID!,
       },
     });
