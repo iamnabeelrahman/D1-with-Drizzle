@@ -9,14 +9,14 @@ import { env } from '@/env';
  */
 export default env.DB_LOCAL_PATH
   ? defineConfig({
-      schema: './src/server/db/schema.ts',
+      schema: './src/server/db/schema',
       dialect: 'sqlite',
       dbCredentials: {
         url: env.DB_LOCAL_PATH,
       },
     })
   : defineConfig({
-      schema: './src/server/db/schema.ts',
+      schema: './src/server/db/schema',
       out: './migrations',
       driver: 'd1-http',
       dialect: 'sqlite',

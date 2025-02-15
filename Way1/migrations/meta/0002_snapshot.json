@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "b835ecf4-8070-44a1-9316-8338e20363b8",
-  "prevId": "3e8f2492-5bf8-4630-9c13-c719196d1167",
+  "id": "66009c3b-0ea5-45c3-ad59-a57d98eb62eb",
+  "prevId": "b835ecf4-8070-44a1-9316-8338e20363b8",
   "tables": {
     "userCarts": {
       "name": "userCarts",
@@ -605,13 +605,6 @@
           "notNull": true,
           "autoincrement": false
         },
-        "username": {
-          "name": "username",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
         "email": {
           "name": "email",
           "type": "text",
@@ -619,19 +612,33 @@
           "notNull": true,
           "autoincrement": false
         },
-        "provider": {
-          "name": "provider",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false,
-          "default": "'local'"
-        },
         "password": {
           "name": "password",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
+          "autoincrement": false
+        },
+        "role": {
+          "name": "role",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'general'"
+        },
+        "username": {
+          "name": "username",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "provider": {
+          "name": "provider",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
           "autoincrement": false
         },
         "reset_password_token": {
@@ -664,14 +671,6 @@
           "autoincrement": false,
           "default": false
         },
-        "role": {
-          "name": "role",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "'general'"
-        },
         "location": {
           "name": "location",
           "type": "text",
@@ -686,8 +685,8 @@
           "notNull": false,
           "autoincrement": false
         },
-        "name": {
-          "name": "name",
+        "full_name": {
+          "name": "full_name",
           "type": "text",
           "primaryKey": false,
           "notNull": false,
@@ -702,6 +701,13 @@
         },
         "organiser_name": {
           "name": "organiser_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "organiser_description": {
+          "name": "organiser_description",
           "type": "text",
           "primaryKey": false,
           "notNull": false,
@@ -732,13 +738,6 @@
         }
       },
       "indexes": {
-        "users_username_unique": {
-          "name": "users_username_unique",
-          "columns": [
-            "username"
-          ],
-          "isUnique": true
-        },
         "users_email_unique": {
           "name": "users_email_unique",
           "columns": [
@@ -755,13 +754,9 @@
   "enums": {},
   "_meta": {
     "schemas": {},
-    "tables": {
-      "\"cart\"": "\"userCarts\"",
-      "\"channel_users\"": "\"event_roles\""
-    },
+    "tables": {},
     "columns": {
-      "\"channels\".\"owner_id\"": "\"channels\".\"organiser_id\"",
-      "\"event_roles\".\"channel_id\"": "\"event_roles\".\"event_id\""
+      "\"users\".\"name\"": "\"users\".\"full_name\""
     }
   },
   "internal": {

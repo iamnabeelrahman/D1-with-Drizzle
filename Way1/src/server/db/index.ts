@@ -1,5 +1,5 @@
 import { drizzle } from 'drizzle-orm/d1';
-import * as schema from '@/server/db/schema';
+import * as schema from '@/server/db/schema/index';
 import { getRequestContext } from '@cloudflare/next-on-pages';
 
 export const runtime = 'edge';

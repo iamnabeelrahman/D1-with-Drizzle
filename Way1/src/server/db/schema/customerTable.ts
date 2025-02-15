@@ -8,8 +8,3 @@ export const customerTable = sqliteTable('customer', {
   companyName: text('companyName').notNull(),
   contactName: text('contactName').notNull(),
 });
-export const users = sqliteTable('users', {
-  id: integer('id').primaryKey(),
-  username: text('username').notNull(),
-  fullName: text('fullName').notNull(),
-});
